@@ -9,8 +9,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "EDNAPushXCE",
-            type: .dynamic,
-            targets: ["EDNAPushXCE"]),
+            targets: ["EDNAPushXCE", "Stub"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -24,5 +23,6 @@ let package = Package(
             url: "https://github.com/KhimuninAA/SPM_CE/releases/download/1.0.1/edna-push-xce-1.3.0.zip",
             checksum: "2a5582577b3704522c659e894592b35feebfa51b2c7d828c5420b3465e89fc3a"
         ),
+        .target(name: "Stub"),
     ]
 )
